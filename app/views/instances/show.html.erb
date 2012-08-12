@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usercomment:</b>
+  <%= @instance.usercomment %>
+</p>
+
+<p>
+  <b>Hostname:</b>
+  <%= @instance.hostname %>
+</p>
+
+<p>
+  <b>Ipaddr:</b>
+  <%= @instance.ipaddr %>
+</p>
+
+<p>
+  <b>Baseimage:</b>
+  <%= @instance.baseimage %>
+</p>
+
+<p>
+  <b>Cpus:</b>
+  <%= @instance.cpus %>
+</p>
+
+<p>
+  <b>Memory:</b>
+  <%= @instance.memory %>
+</p>
+
+
+<%= link_to 'Edit', edit_instance_path(@instance) %> |
+<%= link_to 'Back', instances_path %>

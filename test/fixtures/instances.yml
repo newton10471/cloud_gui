@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usercomment: MyString
+  hostname: MyString
+  ipaddr: MyString
+  baseimage: MyString
+  cpus: 1
+  memory: 1
+
+two:
+  usercomment: MyString
+  hostname: MyString
+  ipaddr: MyString
+  baseimage: MyString
+  cpus: 1
+  memory: 1
