@@ -16,24 +16,16 @@
     <%= f.text_field :usercomment %>
   </div>
   <div class="field">
-    <%= f.label :hostname %><br />
-    <%= f.text_field :hostname %>
-  </div>
-  <div class="field">
-    <%= f.label :ipaddr %><br />
-    <%= f.text_field :ipaddr %>
-  </div>
-  <div class="field">
     <%= f.label :baseimage %><br />
-    <%= f.text_field :baseimage %>
+    <%= f.select :baseimage, Instance::IMAGES %>
   </div>
   <div class="field">
     <%= f.label :cpus %><br />
-    <%= f.number_field :cpus %>
+    <%= f.select :cpus, Instance::CPU_SIZES %>
   </div>
   <div class="field">
     <%= f.label :memory %><br />
-    <%= f.number_field :memory %>
+    <%= f.select :memory, Instance::MEMORY_SIZES %>
   </div>
   <div class="actions">
     <%= f.submit %>
