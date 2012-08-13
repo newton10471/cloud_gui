@@ -45,7 +45,7 @@ class InstancesController < ApplicationController
     respond_to do |format|
       if @instance.save
 
-        system("ssh root@#{CloudGui::Application.config.hypervisor_ip} \"echo #{params[:instance][:usercomment]} >> /tmp/cloudguifile.txt\"")
+        system("ssh root@#{CloudGui::Application.config.hypervisor_ip} \"exec /data/cloud/scripts/provision.sh #{params[:instance][:cpus]} #{params[:instance][:memory]} #{params[:instance][:baseimage]} 2>&1 | tee /data/cloud/logs/cloud_gui.log\"")
 
         format.html { redirect_to @instance, notice: 'Instance was successfully created.' }
         format.json { render json: @instance, status: :created, location: @instance }

@@ -17,15 +17,15 @@
   </div>
   <div class="field">
     <%= f.label :baseimage %><br />
-    <%= f.select :baseimage, Instance::IMAGES %>
+    <%= f.select :baseimage, CloudGui::Application.config.images %>
   </div>
   <div class="field">
     <%= f.label :cpus %><br />
-    <%= f.select :cpus, Instance::CPU_SIZES %>
+    <%= f.select :cpus, CloudGui::Application.config.cpu_sizes %>
   </div>
   <div class="field">
     <%= f.label :memory %><br />
-    <%= f.select :memory, Instance::MEMORY_SIZES %>
+    <%= f.select :memory, CloudGui::Application.config.memory_sizes %>
   </div>
   <div class="actions">
     <%= f.submit %>
